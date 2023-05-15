@@ -14,6 +14,8 @@ int main()
     SetConsoleCP(1252);
     srand(time(NULL));
 
+    remove(rutaLletres);
+    remove(rutaParaules);
     MENU opcio;
 
     do
@@ -24,14 +26,14 @@ int main()
 
         switch (opcio)
         {
-        case SORTIR:
-            printf("Adeu");
-            break;
         case CONTARLLETRES:
             contarLletres();
             break;
         case CONTARPARAULES:
-
+            contarParaules();
+            break;
+        case SORTIR:
+            printf("Adeu");
             break;
         }
     } while (opcio != SORTIR);
